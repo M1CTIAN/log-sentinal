@@ -1,0 +1,16 @@
+# 1. Ignore the logs (Data)
+*.log
+app.log
+
+# 2. Ignore executables (Binaries)
+*.exe
+*.test
+bin/
+
+# 3. Ignore Editor settings (Optional but good)
+.vscode/
+.idea/
+
+# 4. Ignore Mac/Windows system files
+.DS_Store
+Thumbs.db
