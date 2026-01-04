@@ -78,7 +78,7 @@ func generateFakeLogs(fileName string) {
 
 		// 10% chance to generate a hacking log
 		var logMessage string
-		if rand.Intn(2) == 0 {
+		if rand.Intn(20) == 0 {
 			logMessage = fmt.Sprintf("ALERT: Failed login attempt from IP 192.168.1.%d at %s\n", rand.Intn(255), time.Now().Format("15:04:05"))
 		} else {
 			logMessage = fmt.Sprintf("INFO: User action detected at %s\n", time.Now().Format("15:04:05"))
