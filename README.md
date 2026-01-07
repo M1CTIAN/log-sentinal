@@ -34,6 +34,11 @@ The project implements a full data engineering pipeline:
 4. **Storage Layer (PostgreSQL):** A relational database running in Docker. It serves as the "Vault," storing a permanent history of all detected security incidents for audit and analysis.
 5. **Visualization Layer (SOC Dashboard):** A full-stack web application (Go Backend + HTML/JS Frontend) that polls the database and renders a live, auto-updating table of security threats.
 
+## Screenshots
+
+### Live Threat Dashboard
+<img width="1919" height="1057" alt="image" src="https://github.com/user-attachments/assets/6e20646b-8c37-4aea-8078-d7fbb701a46c" />
+
 ## Technology Stack
 
 * **Core Language:** Go (Golang) 1.21+
