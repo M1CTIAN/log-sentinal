@@ -59,11 +59,11 @@ The project implements a full data engineering pipeline:
 log-sentinel/
 ├── cmd/
 │   ├── producer/
-│   │   └── main.go       # Service 1: Log Watcher & Forwarder
+│   │   └── producer.go       # Service 1: Log Watcher & Forwarder
 │   ├── consumer/
-│   │   └── main.go       # Service 2: Log Analyzer & DB Writer
+│   │   └── consumer.go       # Service 2: Log Analyzer & DB Writer
 │   └── dashboard/
-│       ├── main.go       # Service 3: Web Server & API
+│       ├── dashboard.go       # Service 3: Web Server & API
 │       └── templates/
 │           └── index.html # The SOC Frontend
 ├── docker-compose.yml    # Infrastructure Configuration (Kafka + Postgres + UI)
@@ -104,7 +104,7 @@ You will need to run the three microservices in separate terminal windows to sim
 Generates traffic and sends logs to Kafka.
 
 ```bash
-go run cmd/producer/main.go
+go run cmd/producer/producer.go
 
 ```
 
@@ -112,7 +112,7 @@ go run cmd/producer/main.go
 Reads from Kafka, detects threats, and saves them to the database.
 
 ```bash
-go run cmd/consumer/main.go
+go run cmd/consumer/consumer.go
 
 ```
 
@@ -120,7 +120,7 @@ go run cmd/consumer/main.go
 Starts the web server to visualize the data.
 
 ```bash
-go run cmd/dashboard/main.go
+go run cmd/dashboard/dashboard.go
 
 ```
 
